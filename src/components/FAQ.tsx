@@ -45,54 +45,54 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative w-full bg-[#FAF5EB] py-14 sm:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-[1040px] mx-auto px-5 sm:px-10 lg:px-12">
+    <section id="faq" className="relative w-full bg-[#FAF4E6] py-16 sm:py-20 lg:py-24 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[220px]">
         
-        {/* Section Heading */}
+        {/* Section Heading - Abhaya Libre 700 Bold 40px / 56px #000000 */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-10 sm:mb-16 lg:mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <h2 className="font-abhaya font-bold text-[32px] sm:text-[42px] lg:text-[46px] leading-tight text-black">
+          <h2 className="font-abhaya font-bold text-[32px] sm:text-[36px] lg:text-[40px] leading-[44px] sm:leading-[50px] lg:leading-[56px] text-[#000000] tracking-[0px]">
             Frequently asked questions
           </h2>
         </motion.div>
 
-        {/* FAQ Accordion List */}
-        <div className="flex flex-col space-y-1 sm:space-y-2">
+        {/* FAQ Accordion List with #E8DFC8 border dividers */}
+        <div className="flex flex-col">
           {faqs.map((faq, index) => {
             const isOpen = openId === faq.id;
-            const isLast = index === faqs.length - 1;
+            const isFirst = index === 0;
 
             return (
               <div
                 key={faq.id}
-                className={`py-4 sm:py-6 ${
-                  !isLast ? "border-b border-[#E3D9C3]" : ""
+                className={`py-6 sm:py-7 ${
+                  !isFirst ? "border-t border-[#E8DFC8]" : ""
                 } transition-colors`}
               >
-                {/* Question Header */}
+                {/* Question Header - Abhaya Libre 700 Bold 24px #1B1B1B */}
                 <button
                   onClick={() => toggleFAQ(faq.id)}
-                  className="w-full flex items-center justify-start text-left gap-3.5 sm:gap-4 group cursor-pointer focus:outline-none"
+                  className="w-full flex items-start justify-start text-left gap-4 sm:gap-6 group cursor-pointer focus:outline-none"
                 >
-                  <span className="shrink-0 text-black group-hover:text-[#B37E22] transition-colors">
+                  <span className="shrink-0 text-[#1B1B1B] mt-0.5 group-hover:text-[#B37E22] transition-colors">
                     {isOpen ? (
-                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
+                      <Minus className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
                     ) : (
-                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
+                      <Plus className="w-5 h-5 sm:w-6 sm:h-6 stroke-[1.8]" />
                     )}
                   </span>
 
-                  <h3 className="font-abhaya font-bold text-[18px] sm:text-[22px] leading-[24px] sm:leading-[26px] text-black group-hover:text-[#B37E22] transition-colors">
+                  <h3 className="font-abhaya font-bold text-[20px] sm:text-[22px] lg:text-[24px] leading-tight text-[#1B1B1B] tracking-[0%] group-hover:text-[#B37E22] transition-colors">
                     {faq.question}
                   </h3>
                 </button>
 
-                {/* Expandable Answer with AnimatePresence */}
+                {/* Expandable Answer - Work Sans 400 Regular 24px (18-24px responsive) leading 134% #000000 */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
@@ -103,8 +103,8 @@ export default function FAQ() {
                       transition={{ duration: 0.35, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="pt-2.5 sm:pt-3 pb-1 pl-7 sm:pl-9 pr-2 sm:pr-8">
-                        <p className="font-work font-normal text-[14px] sm:text-[16px] leading-[23px] sm:leading-[26px] text-neutral-800">
+                      <div className="pt-4 pb-2 pl-9 sm:pl-12 max-w-[1045px]">
+                        <p className="font-work font-normal text-[16px] sm:text-[20px] lg:text-[24px] leading-[26px] sm:leading-[30px] lg:leading-[134%] text-[#000000] tracking-[0%]">
                           {faq.answer}
                         </p>
                       </div>
@@ -122,12 +122,12 @@ export default function FAQ() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 sm:mt-16 lg:mt-20 flex justify-center"
+          className="mt-14 sm:mt-16 lg:mt-20 flex justify-center"
         >
           <motion.button
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
-            className="btn-gold w-full sm:w-[200px] h-[48px] sm:h-[50px] rounded-[50px] flex items-center justify-center gap-2.5 font-work font-medium text-[15px] leading-[18px] text-black cursor-pointer group select-none shadow-md shadow-[#C18C2C]/15"
+            className="btn-gold w-[200px] h-[50px] rounded-[50px] flex items-center justify-center gap-2.5 font-work font-medium text-[15px] leading-[18px] text-black cursor-pointer group select-none shadow-md shadow-[#C18C2C]/15"
           >
             <span>See all FAQ</span>
             <ArrowRight className="w-[18px] h-[18px] stroke-[2.2] group-hover:translate-x-1 transition-transform duration-200" />

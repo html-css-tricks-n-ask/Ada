@@ -8,52 +8,45 @@ interface StateItem {
   name: string;
   status: string;
   image: string;
-  isArch: boolean;
 }
 
 const states: StateItem[] = [
   {
     name: "Arizona",
     status: "Virtual Appointment",
-    image: "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=80",
-    isArch: false,
+    image: "/Image (Arizona).png",
   },
   {
     name: "Washington",
     status: "Virtual Appointment",
-    image: "https://images.unsplash.com/photo-1502175353174-a7a70e73b362?auto=format&fit=crop&w=800&q=80",
-    isArch: true,
+    image: "/Image (Washington).png",
   },
   {
     name: "Oregon",
     status: "Coming Soon",
-    image: "https://images.unsplash.com/photo-1544085311-11a028465b03?auto=format&fit=crop&w=800&q=80",
-    isArch: true,
+    image: "/Image (Oregon).png",
   },
   {
     name: "New Mexico",
     status: "Virtual Appointment",
-    image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80",
-    isArch: false,
+    image: "/Image (Arizona) (1).png",
   },
   {
     name: "Colorado",
     status: "Virtual Appointment",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    isArch: true,
+    image: "/Image (Colorado).png",
   },
   {
     name: "Kansas",
     status: "Virtual Appointment",
-    image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80",
-    isArch: true,
+    image: "/Image (Kansas).png",
   },
 ];
 
 export default function StatesServed() {
   return (
-    <section className="relative w-full bg-[#FAF5EB] py-16 sm:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="relative w-full bg-[#FAF4E6] py-16 sm:py-20 lg:py-24 overflow-hidden select-none">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[100px]">
         
         {/* Section Heading */}
         <motion.div
@@ -63,7 +56,7 @@ export default function StatesServed() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14 sm:mb-16 lg:mb-20"
         >
-          <h2 className="font-abhaya font-bold text-[34px] sm:text-[40px] lg:text-[46px] leading-[42px] sm:leading-[48px] lg:leading-[52px] text-black">
+          <h2 className="font-abhaya font-bold text-[34px] sm:text-[40px] lg:text-[46px] leading-[42px] sm:leading-[48px] lg:leading-[52px] text-[#000000]">
             Now Accepting Patients In
             <br />
             The Following States
@@ -71,7 +64,7 @@ export default function StatesServed() {
         </motion.div>
 
         {/* 6 States Grid (3 columns x 2 rows) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 sm:gap-x-10 lg:gap-x-14 gap-y-12 sm:gap-y-16 max-w-[1240px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-8 lg:gap-x-10 gap-y-12 sm:gap-y-16 max-w-[1280px] mx-auto justify-items-center">
           {states.map((item, idx) => (
             <motion.div
               key={idx}
@@ -79,34 +72,40 @@ export default function StatesServed() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.6, delay: (idx % 3) * 0.15 }}
-              whileHover={{ y: -8 }}
-              className="flex flex-col items-center text-center group cursor-pointer"
+              whileHover={{ y: -6 }}
+              className="flex flex-col items-center text-center group cursor-pointer w-full max-w-[400px]"
             >
-              {/* Image Container (Rectangle or Arched Semicircle) */}
-              <motion.div
-                className={`w-full max-w-[360px] h-[190px] sm:h-[210px] lg:h-[220px] relative overflow-hidden bg-neutral-200 shadow-sm transition-shadow duration-300 group-hover:shadow-md ${
-                  item.isArch
-                    ? "rounded-t-full rounded-b-none"
-                    : "rounded-none"
-                }`}
-              >
+              {/* Arched Semicircle Dome Image: 400px x 200px */}
+              <div className="w-full max-w-[400px] h-[200px] relative overflow-hidden rounded-t-[200px] rounded-b-none bg-neutral-200 shadow-sm transition-shadow duration-300 group-hover:shadow-md">
                 <Image
                   src={item.image}
                   alt={`${item.name} psychiatric services`}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 360px"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  unoptimized
+                  priority={idx < 3}
                 />
-              </motion.div>
 
-              {/* State Name */}
-              <h3 className="font-abhaya font-bold text-[28px] sm:text-[32px] leading-[36px] text-black mt-5 sm:mt-6 group-hover:text-[#B37E22] transition-colors">
+                {/* Exact Figma Shade Layer 1: #000000 25% tint */}
+                <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+
+                {/* Exact Figma Shade Layer 2: Linear Gradient #232020 0% -> 45% -> 100% */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(35, 32, 32, 0) 0%, rgba(35, 32, 32, 0.45) 45%, rgba(35, 32, 32, 0.9) 100%)",
+                  }}
+                />
+              </div>
+
+              {/* State Name: Abhaya Libre 700 Bold 44px / 100% leading #000000 */}
+              <h3 className="font-abhaya font-bold text-[32px] sm:text-[38px] lg:text-[44px] leading-[100%] text-[#000000] mt-5 sm:mt-6 group-hover:text-[#C18C2C] transition-colors">
                 {item.name}
               </h3>
 
-              {/* Status / Subtitle */}
-              <p className="font-work font-normal text-[15px] sm:text-[16px] leading-[22px] text-neutral-800 mt-1">
+              {/* Status / Subtitle: Work Sans 400 Regular 18px / 38.5px line-height #1B1B1B */}
+              <p className="font-work font-normal text-[16px] sm:text-[18px] leading-[30px] sm:leading-[38.5px] text-[#1B1B1B]">
                 {item.status}
               </p>
             </motion.div>

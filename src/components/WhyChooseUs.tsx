@@ -46,8 +46,8 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <section className="relative w-full bg-[#F7EED9] py-16 sm:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="relative w-full bg-[#F7EED9] py-16 sm:py-20 lg:py-24 overflow-hidden select-none">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-[100px]">
         
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 xl:gap-20">
           
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative w-full max-w-[580px] lg:max-w-[620px] shrink-0"
+            className="relative w-full max-w-[560px] lg:max-w-[600px] shrink-0"
           >
             {/* Offset Gold Border Frame */}
             <div className="absolute inset-0 translate-x-4 translate-y-4 sm:translate-x-6 sm:translate-y-6 border border-[#DAA520] pointer-events-none rounded-none z-0" />
@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
                 src="/six.png"
                 alt="Therapy session at Ada Psychiatry"
                 fill
-                sizes="(max-width: 1024px) 100vw, 620px"
+                sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover object-center"
                 priority
               />
@@ -81,45 +81,45 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-            className="w-full max-w-[580px] flex flex-col justify-center"
+            className="w-full max-w-[488px] flex flex-col justify-center text-left"
           >
-            {/* Section Title */}
-            <h2 className="font-abhaya font-bold text-[32px] sm:text-[40px] lg:text-[44px] leading-[40px] sm:leading-[48px] lg:leading-[52px] text-black mb-8 sm:mb-10">
+            {/* Section Title: Abhaya Libre 700 Bold 40px / 47.5px #000000 max-w-[483px] */}
+            <h2 className="font-abhaya font-bold text-[32px] sm:text-[36px] lg:text-[40px] leading-[40px] sm:leading-[44px] lg:leading-[47.5px] text-[#000000] tracking-[0px] mb-8 sm:mb-10 max-w-[483px]">
               Why Should You Choose Ada Psychiatry?
             </h2>
 
-            {/* Accordion List */}
+            {/* Accordion List with #DAA520 border dividers */}
             <div className="flex flex-col">
               {accordionItems.map((item, index) => {
                 const isOpen = openId === item.id;
-                const isLast = index === accordionItems.length - 1;
+                const isFirst = index === 0;
 
                 return (
                   <div
                     key={item.id}
                     className={`py-4 sm:py-5 ${
-                      !isLast ? "border-b border-[#DAA520]" : ""
+                      !isFirst ? "border-t border-[#DAA520]" : ""
                     } transition-colors`}
                   >
-                    {/* Header Row */}
+                    {/* Header Row: Abhaya Libre 700 Bold 24px #000000 */}
                     <button
                       onClick={() => toggleItem(item.id)}
                       className="w-full flex items-center justify-start text-left gap-3.5 group cursor-pointer focus:outline-none"
                     >
-                      <span className="shrink-0 text-black group-hover:text-[#B37E22] transition-colors">
+                      <span className="shrink-0 text-[#000000] group-hover:text-[#B37E22] transition-colors">
                         {isOpen ? (
-                          <Minus className="w-5 h-5 stroke-[2]" />
+                          <Minus className="w-5 h-5 stroke-[1.8]" />
                         ) : (
-                          <Plus className="w-5 h-5 stroke-[2]" />
+                          <Plus className="w-5 h-5 stroke-[1.8]" />
                         )}
                       </span>
 
-                      <span className="font-abhaya font-bold text-[20px] sm:text-[22px] leading-[26px] text-black group-hover:text-[#B37E22] transition-colors">
+                      <span className="font-abhaya font-bold text-[20px] sm:text-[22px] lg:text-[24px] leading-[100%] text-[#000000] tracking-[0%] group-hover:text-[#B37E22] transition-colors">
                         {item.title}
                       </span>
                     </button>
 
-                    {/* Expandable Content with AnimatePresence */}
+                    {/* Expandable Content: Work Sans 400 Regular 20px / 134% leading #000000 80% opacity max-w-[488px] */}
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
@@ -130,8 +130,8 @@ export default function WhyChooseUs() {
                           transition={{ duration: 0.35, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <div className="pt-3 pb-1 pl-8 sm:pl-9 pr-2">
-                            <p className="font-work font-normal text-[15px] sm:text-[16px] leading-[25px] text-neutral-800">
+                          <div className="pt-3 pb-1 pl-8 max-w-[488px]">
+                            <p className="font-work font-normal text-[16px] sm:text-[18px] lg:text-[20px] leading-[26px] sm:leading-[28px] lg:leading-[134%] text-[#000000]/80 tracking-[0%]">
                               {item.content}
                             </p>
                           </div>

@@ -4,18 +4,18 @@ import React from "react";
 
 export default function QuoteBanner() {
   return (
-    <section className="relative w-full bg-[#FAF4E6] py-8 sm:py-12 lg:py-16 overflow-hidden">
+    <section className="relative w-full bg-[#FAF4E6] overflow-hidden select-none">
       
-      {/* Full Bleed Vector Background (Edge to Edge without side gaps) */}
-      <div className="relative w-full min-h-[220px] sm:min-h-[241px] flex items-center justify-center">
+      {/* Full Bleed Banner Container (Exact 1440px x 241px) */}
+      <div className="relative w-full h-[241px] flex items-center justify-center">
         
-        {/* Full-width SVG stretching beyond screen edges to eliminate any side gap */}
-        <div className="absolute inset-0 w-[114%] -left-[7%] h-full flex items-center justify-center pointer-events-none">
+        {/* Full-width SVG stretching edge to edge with exact Figma wavy ribbon */}
+        <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
           <svg
             viewBox="0 0 1355 241"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full object-fill"
+            className="w-full h-[241px] object-fill"
             preserveAspectRatio="none"
           >
             <path
@@ -26,20 +26,20 @@ export default function QuoteBanner() {
         </div>
 
         {/* Centered Content */}
-        <div className="relative z-10 max-w-[1100px] mx-auto px-6 sm:px-12 py-10 sm:py-14 text-center flex flex-col items-center justify-center">
+        <div className="relative z-10 max-w-[1100px] mx-auto px-6 sm:px-12 text-center flex flex-col items-center justify-center">
           
           {/* Golden Quote Mark */}
-          <div className="text-[#C18C2C] mb-3 sm:mb-4 select-none">
+          <div className="text-[#C18C2C] mb-2 sm:mb-3 select-none">
             <svg
-              className="w-7 h-7 sm:w-9 sm:h-9 fill-current"
+              className="w-7 h-7 sm:w-8 sm:h-8 fill-current"
               viewBox="0 0 24 24"
             >
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
             </svg>
           </div>
 
-          {/* Quote Text */}
-          <blockquote className="font-abhaya font-semibold text-[22px] sm:text-[30px] lg:text-[36px] leading-[32px] sm:leading-[42px] lg:leading-[48px] text-white tracking-wide">
+          {/* Quote Text: Abhaya Libre 600 / 700 */}
+          <blockquote className="font-abhaya font-semibold text-[22px] sm:text-[28px] lg:text-[34px] leading-[32px] sm:leading-[40px] lg:leading-[44px] text-white tracking-wide max-w-[920px]">
             “We help people living with and experiencing difficult times”
           </blockquote>
 

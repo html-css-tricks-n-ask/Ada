@@ -37,18 +37,18 @@ const treatments: TreatmentItem[] = [
 
 export default function TreatmentFocus() {
   return (
-    <section className="relative w-full bg-[#FAF4E6] py-14 sm:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-24">
+    <section className="relative w-full bg-[#FAF4E6] py-16 sm:py-20 lg:py-24 overflow-hidden select-none">
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-[100px]">
         
-        {/* Section Heading */}
+        {/* Section Heading: Abhaya Libre 700 Bold 37.5px / 56.25px #000000 */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-14 sm:mb-20 lg:mb-24"
+          className="text-center mb-16 sm:mb-20 lg:mb-24 flex justify-center"
         >
-          <h2 className="font-abhaya font-bold text-[34px] sm:text-[42px] lg:text-[46px] leading-tight text-black">
+          <h2 className="font-abhaya font-bold text-[32px] sm:text-[36px] lg:text-[37.5px] leading-[44px] sm:leading-[50px] lg:leading-[56.25px] text-[#000000] tracking-[0px]">
             Our Treatment Focus
           </h2>
         </motion.div>
@@ -65,7 +65,7 @@ export default function TreatmentFocus() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.8, delay: index * 0.15 }}
-                className={`flex flex-col items-center justify-between gap-8 sm:gap-12 lg:gap-16 xl:gap-24 ${
+                className={`flex flex-col items-center justify-center gap-10 sm:gap-12 lg:gap-[74px] ${
                   isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
@@ -73,7 +73,7 @@ export default function TreatmentFocus() {
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.3 }}
-                  className="relative w-[270px] h-[270px] xs:w-[320px] xs:h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] shrink-0 cursor-pointer group"
+                  className="relative w-[280px] h-[280px] xs:w-[320px] xs:h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] shrink-0 cursor-pointer group"
                 >
                   {/* Offset Gold Accent Ring */}
                   <motion.div
@@ -92,21 +92,25 @@ export default function TreatmentFocus() {
                   </div>
                 </motion.div>
 
-                {/* Content Block */}
-                <div className="flex-1 max-w-[530px] flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
-                  <h3 className="font-abhaya font-bold text-[26px] xs:text-[30px] sm:text-[34px] lg:text-[36px] leading-tight text-black">
+                {/* Content Block: Width 553.13px */}
+                <div className="flex-1 max-w-[553.13px] flex flex-col justify-start text-left items-start">
+                  
+                  {/* Title: Abhaya Libre 700 Bold 33.75px / 32.81px #000000 */}
+                  <h3 className="font-abhaya font-bold text-[28px] sm:text-[31px] lg:text-[33.75px] leading-[32px] sm:leading-[32.81px] text-[#000000] tracking-[0px]">
                     {item.title}
                   </h3>
 
-                  <p className="font-work font-normal text-[15px] sm:text-[16px] lg:text-[17px] leading-[25px] sm:leading-[27px] text-neutral-800 mt-3 sm:mt-5">
+                  {/* Description: Abhaya Libre 400 Regular 18.75px / 33.75px #000000 */}
+                  <p className="font-abhaya font-normal text-[17px] sm:text-[18px] lg:text-[18.75px] leading-[28px] sm:leading-[32px] lg:leading-[33.75px] text-[#000000] tracking-[0px] mt-4 sm:mt-5 max-w-[553.13px]">
                     {item.description}
                   </p>
 
-                  <div className="mt-5 sm:mt-8 w-full flex justify-center lg:justify-start">
+                  {/* CTA Button: 145px x 46px */}
+                  <div className="mt-6 sm:mt-7">
                     <motion.button
                       whileHover={{ scale: 1.04 }}
                       whileTap={{ scale: 0.98 }}
-                      className="btn-gold w-full sm:w-[145px] h-[46px] rounded-[50px] font-work font-medium text-[14px] leading-[18px] text-black flex items-center justify-center cursor-pointer select-none shadow-md shadow-[#C18C2C]/15"
+                      className="btn-gold w-[145px] h-[46px] rounded-[50px] font-work font-medium text-[14px] leading-[18px] text-black flex items-center justify-center cursor-pointer select-none shadow-md shadow-[#C18C2C]/15"
                     >
                       Learn More
                     </motion.button>

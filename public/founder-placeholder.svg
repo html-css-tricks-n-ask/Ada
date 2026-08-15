@@ -1,0 +1,60 @@
+<svg width="509" height="330" viewBox="0 0 509 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="509" height="330" rx="20" fill="#E8E2D5"/>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#EDE6D8"/>
+      <stop offset="100%" stopColor="#DFD5C2"/>
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#6C7278"/>
+      <stop offset="100%" stopColor="#4B5158"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#E0AC8A"/>
+      <stop offset="100%" stopColor="#C68962"/>
+    </linearGradient>
+  </defs>
+  
+  {/* Soft Clinic Office Background */}
+  <rect width="509" height="330" rx="20" fill="url(#bgGrad)"/>
+  
+  {/* Office background elements (blurred shelf, plants, warm room) */}
+  <rect x="30" y="80" width="120" height="90" rx="6" fill="#D5CBB9" opacity="0.6"/>
+  <rect x="380" y="90" width="90" height="110" rx="6" fill="#D5CBB9" opacity="0.6"/>
+  <circle cx="430" cy="80" r="16" fill="#9FB59D" opacity="0.7"/>
+
+  {/* Founder Body / Blazer */}
+  <path d="M150 330 C150 250, 200 215, 255 215 C310 215, 360 250, 360 330 Z" fill="url(#suitGrad)"/>
+  
+  {/* Inner White Blouse / Lapels */}
+  <path d="M230 215 L255 275 L280 215 Z" fill="#FFFFFF"/>
+  <path d="M210 220 L242 300 L230 330 L180 330 Z" fill="#585E64"/>
+  <path d="M300 220 L268 300 L280 330 L330 330 Z" fill="#4B5158"/>
+  
+  {/* Neck */}
+  <rect x="240" y="170" width="30" height="40" rx="6" fill="url(#skinGrad)"/>
+  
+  {/* Head & Face */}
+  <ellipse cx="255" cy="140" rx="38" ry="46" fill="url(#skinGrad)"/>
+  
+  {/* Hair */}
+  <path d="M208 140 C205 90, 240 75, 255 75 C270 75, 305 90, 302 140 C302 175, 308 210, 312 230 C295 210, 290 170, 290 140 C280 100, 230 100, 220 140 C220 170, 215 210, 198 230 C202 210, 208 175, 208 140 Z" fill="#3D2314"/>
+  
+  {/* Glasses */}
+  <rect x="226" y="125" width="24" height="18" rx="8" fill="none" stroke="#222222" stroke-width="2.5"/>
+  <rect x="260" y="125" width="24" height="18" rx="8" fill="none" stroke="#222222" stroke-width="2.5"/>
+  <line x1="250" y1="133" x2="260" y2="133" stroke="#222222" stroke-width="2"/>
+  
+  {/* Warm smile */}
+  <path d="M245 158 Q255 167 265 158" stroke="#8E4638" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  
+  {/* Clipboard */}
+  <g transform="translate(185, 250) rotate(-10)">
+    <rect x="0" y="0" width="105" height="90" rx="8" fill="#C5A059"/>
+    <rect x="6" y="10" width="93" height="75" rx="4" fill="#FDFBF7"/>
+    <rect x="35" y="4" width="35" height="12" rx="3" fill="#666666"/>
+    <line x1="16" y1="28" x2="80" y2="28" stroke="#CCCCCC" stroke-width="2"/>
+    <line x1="16" y1="40" x2="70" y2="40" stroke="#CCCCCC" stroke-width="2"/>
+    <line x1="16" y1="52" x2="85" y2="52" stroke="#CCCCCC" stroke-width="2"/>
+  </g>
+</svg>

@@ -159,8 +159,8 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* 8 Geometric Diamond Pagination Dots */}
-        <div className="mt-12 sm:mt-16 flex items-center justify-center gap-3">
+        {/* Hexagonal Carousel Pagination Indicators (Exact Figma 16px x 16px, 1px #C18C2C) */}
+        <div className="mt-12 sm:mt-16 flex items-center justify-center gap-2.5">
           {Array.from({ length: 8 }).map((_, dotIdx) => {
             const isDotActive = dotIdx === activeIndex;
 
@@ -170,16 +170,41 @@ export default function Testimonials() {
                 onClick={() => setActiveIndex(dotIdx)}
                 aria-label={`Go to slide ${dotIdx + 1}`}
                 aria-current={isDotActive ? "true" : undefined}
-                className="focus:outline-none p-1.5 group cursor-pointer"
+                className="w-[16px] h-[16px] flex items-center justify-center focus:outline-none group cursor-pointer"
               >
-                <div
-                  className={`w-3 h-3 rotate-45 transition-all duration-300 ${
-                    isDotActive
-                      ? "bg-[#C18C2C] scale-125 shadow-sm"
-                      : "border-[1.5px] border-[#C18C2C] bg-transparent hover:bg-[#C18C2C]/40"
-                  }`}
-                  style={{ borderRadius: "1px" }}
-                />
+                {isDotActive ? (
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    shapeRendering="geometricPrecision"
+                    className="w-[16px] h-[16px]"
+                  >
+                    <path
+                      d="M8 0.5L15.5 4.5V11.5L8 15.5L0.5 11.5V4.5L8 0.5Z"
+                      fill="#C18C2C"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    shapeRendering="geometricPrecision"
+                    className="w-[16px] h-[16px] transition-transform duration-200 group-hover:scale-105"
+                  >
+                    <path
+                      d="M8 0.6L15.2 4.6V11.4L8 15.4L0.8 11.4V4.6L8 0.6Z"
+                      stroke="#C18C2C"
+                      strokeWidth="1"
+                      strokeLinejoin="miter"
+                      fill="none"
+                      className="group-hover:stroke-[#9B6E1F] transition-colors"
+                    />
+                  </svg>
+                )}
               </button>
             );
           })}

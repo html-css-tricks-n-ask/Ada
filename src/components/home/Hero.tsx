@@ -125,8 +125,8 @@ export default function Hero() {
                         id={`heroActiveHex-${idx}`}
                         x1="0"
                         y1="0"
-                        x2="0"
-                        y2="16"
+                        x2="16"
+                        y2="0"
                         gradientUnits="userSpaceOnUse"
                       >
                         <stop offset="0%" stopColor="#C18C2C" />
@@ -135,7 +135,7 @@ export default function Hero() {
                       </linearGradient>
                     </defs>
                     <path
-                      d="M8 0.5L15 4.5V11.5L8 15.5L1 11.5V4.5L8 0.5Z"
+                      d="M8 0.5L15.5 4.5V11.5L8 15.5L0.5 11.5V4.5L8 0.5Z"
                       fill={`url(#heroActiveHex-${idx})`}
                     />
                   </svg>
@@ -149,9 +149,9 @@ export default function Hero() {
                     className="w-[16px] h-[16px] transition-transform duration-200 group-hover:scale-105"
                   >
                     <path
-                      d="M8 0.8L15 4.7V11.3L8 15.2L1 11.3V4.7L8 0.8Z"
-                      stroke="#DAA520"
-                      strokeWidth="0.75"
+                      d="M8 0.6L15.2 4.6V11.4L8 15.4L0.8 11.4V4.6L8 0.6Z"
+                      stroke="#C18C2C"
+                      strokeWidth="1"
                       strokeLinejoin="miter"
                       fill="none"
                       className="group-hover:stroke-[#FCF38A] transition-colors"

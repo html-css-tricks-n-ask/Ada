@@ -50,7 +50,6 @@ export default function MeetFounder() {
               fill
               sizes="509px"
               className="object-cover object-center"
-              priority
             />
           </motion.div>
 

@@ -77,6 +77,8 @@ export default function FAQ() {
                 {/* Question Header - Abhaya Libre 700 Bold 24px #1B1B1B */}
                 <button
                   onClick={() => toggleFAQ(faq.id)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${faq.id}`}
                   className="w-full flex items-start justify-start text-left gap-4 sm:gap-6 group cursor-pointer focus:outline-none"
                 >
                   <span className="shrink-0 text-[#1B1B1B] mt-0.5 group-hover:text-[#B37E22] transition-colors">
@@ -96,7 +98,10 @@ export default function FAQ() {
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
+                      id={`faq-answer-${faq.id}`}
                       key="faq-answer"
+                      role="region"
+                      aria-labelledby={`faq-header-${faq.id}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}

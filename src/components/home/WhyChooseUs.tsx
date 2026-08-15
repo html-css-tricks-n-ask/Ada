@@ -70,7 +70,6 @@ export default function WhyChooseUs() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 588px"
                 className="object-cover object-center"
-                priority
               />
             </div>
           </motion.div>
@@ -104,6 +103,8 @@ export default function WhyChooseUs() {
                     {/* Header Row: Abhaya Libre 700 Bold 24px #000000 */}
                     <button
                       onClick={() => toggleItem(item.id)}
+                      aria-expanded={isOpen}
+                      aria-controls={`why-choose-answer-${item.id}`}
                       className="w-full flex items-center justify-start text-left gap-3.5 group cursor-pointer focus:outline-none"
                     >
                       <span className="shrink-0 text-[#000000] group-hover:text-[#B37E22] transition-colors">
@@ -123,7 +124,10 @@ export default function WhyChooseUs() {
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
+                          id={`why-choose-answer-${item.id}`}
                           key="content"
+                          role="region"
+                          aria-labelledby={`why-choose-header-${item.id}`}
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}

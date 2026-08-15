@@ -169,6 +169,7 @@ export default function Testimonials() {
                 key={dotIdx}
                 onClick={() => setActiveIndex(dotIdx)}
                 aria-label={`Go to slide ${dotIdx + 1}`}
+                aria-current={isDotActive ? "true" : undefined}
                 className="focus:outline-none p-1.5 group cursor-pointer"
               >
                 <div

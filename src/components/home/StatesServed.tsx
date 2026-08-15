@@ -83,7 +83,6 @@ export default function StatesServed() {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  priority={idx < 3}
                 />
 
                 {/* Exact Figma Shade Layer 1: #000000 25% tint */}

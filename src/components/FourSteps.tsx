@@ -15,7 +15,7 @@ const steps: StepItem[] = [
     number: "01",
     label: "Schedule an appointment",
     icon: (
-      <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 48 48" className="w-10 h-10 sm:w-12 sm:h-12" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="8" y="10" width="32" height="30" rx="4" stroke="#FFFFFF" />
         <line x1="8" y1="18" x2="40" y2="18" stroke="#FFFFFF" />
         <line x1="16" y1="6" x2="16" y2="12" stroke="#FFFFFF" />
@@ -34,7 +34,7 @@ const steps: StepItem[] = [
     number: "02",
     label: "Connect with your provider",
     icon: (
-      <svg viewBox="0 0 48 48" className="w-12 h-12" stroke="#FFFFFF" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 48 48" className="w-10 h-10 sm:w-12 sm:h-12" stroke="#FFFFFF" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 26L20 20L25 25L22 28L17 23" />
         <path d="M34 26L28 20L23 25L26 28L31 23" />
         <path d="M10 22L16 16L21 21" stroke="#FCF38A" />
@@ -48,7 +48,7 @@ const steps: StepItem[] = [
     number: "03",
     label: "Discuss your comprehensive assessment",
     icon: (
-      <svg viewBox="0 0 48 48" className="w-12 h-12" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 48 48" className="w-10 h-10 sm:w-12 sm:h-12" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M26 12H38C40 12 42 14 42 16V22C42 24 40 26 38 26H35L31 30V26H28" stroke="#FCF38A" />
         <circle cx="33" cy="19" r="1" fill="#FCF38A" />
         <circle cx="36" cy="19" r="1" fill="#FCF38A" />
@@ -63,7 +63,7 @@ const steps: StepItem[] = [
     number: "04",
     label: "Receive your individualized treatment plan",
     icon: (
-      <svg viewBox="0 0 48 48" className="w-12 h-12" stroke="#FFFFFF" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 48 48" className="w-10 h-10 sm:w-12 sm:h-12" stroke="#FFFFFF" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="12" y="10" width="24" height="30" rx="3" stroke="#FFFFFF" />
         <path d="M19 10V7C19 6 20 5 21 5H27C28 5 29 6 29 7V10" stroke="#FCF38A" />
         <circle cx="18" cy="18" r="1.5" stroke="#FCF38A" />
@@ -79,7 +79,7 @@ const steps: StepItem[] = [
 
 export default function FourSteps() {
   return (
-    <section className="relative w-full bg-black py-16 sm:py-20 lg:py-24 border-y-4 border-[#C18C2C] overflow-hidden" style={{
+    <section className="relative w-full bg-black py-14 sm:py-20 lg:py-24 border-y-4 border-[#C18C2C] overflow-hidden" style={{
       borderImageSource: "linear-gradient(90deg, #C18C2C 0%, #FCF38A 50.52%, #C18C2C 100%)",
       borderImageSlice: 1
     }}>
@@ -91,9 +91,9 @@ export default function FourSteps() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16 sm:mb-20 lg:mb-24"
+          className="text-center mb-12 sm:mb-20 lg:mb-24"
         >
-          <h2 className="font-abhaya font-bold text-[34px] sm:text-[42px] lg:text-[46px] leading-[42px] sm:leading-[50px] lg:leading-[54px] text-transparent bg-clip-text bg-gradient-to-r from-[#C18C2C] via-[#FCF38A] to-[#C18C2C]">
+          <h2 className="font-abhaya font-bold text-[30px] sm:text-[42px] lg:text-[46px] leading-[38px] sm:leading-[50px] lg:leading-[54px] text-transparent bg-clip-text bg-gradient-to-r from-[#C18C2C] via-[#FCF38A] to-[#C18C2C]">
             Four Simple Steps To Get
             <br />
             Started
@@ -101,7 +101,7 @@ export default function FourSteps() {
         </motion.div>
 
         {/* 4 Steps Flow */}
-        <div className="relative flex flex-col md:flex-row items-center md:items-start justify-between gap-12 md:gap-4 lg:gap-8">
+        <div className="relative flex flex-col md:flex-row items-center md:items-start justify-between gap-8 sm:gap-12 md:gap-4 lg:gap-8">
           {steps.map((step, idx) => {
             const isLast = idx === steps.length - 1;
 
@@ -114,39 +114,44 @@ export default function FourSteps() {
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.6, delay: idx * 0.15 }}
                   whileHover={{ y: -6 }}
-                  className="flex flex-col items-center text-center w-full max-w-[230px] z-10 cursor-pointer group"
+                  className="flex flex-col items-center text-center w-full max-w-[240px] z-10 cursor-pointer group"
                 >
                   {/* Icon */}
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                    className="h-14 flex items-center justify-center mb-3"
+                    className="h-12 sm:h-14 flex items-center justify-center mb-2 sm:mb-3"
                   >
                     {step.icon}
                   </motion.div>
 
                   {/* Step Number in Gold */}
-                  <span className="font-abhaya font-bold text-[24px] sm:text-[26px] leading-tight text-[#FCF38A] mb-2 select-none group-hover:scale-110 transition-transform">
+                  <span className="font-abhaya font-bold text-[22px] sm:text-[26px] leading-tight text-[#FCF38A] mb-1.5 sm:mb-2 select-none group-hover:scale-110 transition-transform">
                     {step.number}
                   </span>
 
                   {/* Step Label */}
-                  <p className="font-work font-normal text-[14px] sm:text-[15px] leading-[22px] text-white/95 group-hover:text-white transition-colors">
+                  <p className="font-work font-normal text-[14px] sm:text-[15px] leading-[20px] sm:leading-[22px] text-white/95 group-hover:text-white transition-colors">
                     {step.label}
                   </p>
                 </motion.div>
 
-                {/* Connecting Dotted Line between steps */}
+                {/* Connecting Line between steps (Horizontal on desktop, subtle vertical dot on mobile) */}
                 {!isLast && (
-                  <motion.div
-                    initial={{ opacity: 0, scaleX: 0 }}
-                    whileInView={{ opacity: 1, scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.3 + idx * 0.15 }}
-                    className="hidden md:flex flex-1 items-center justify-center pt-8 px-2 origin-left"
-                  >
-                    <div className="w-full border-t border-dotted border-white/40" />
-                  </motion.div>
+                  <>
+                    <motion.div
+                      initial={{ opacity: 0, scaleX: 0 }}
+                      whileInView={{ opacity: 1, scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.3 + idx * 0.15 }}
+                      className="hidden md:flex flex-1 items-center justify-center pt-8 px-2 origin-left"
+                    >
+                      <div className="w-full border-t border-dotted border-white/40" />
+                    </motion.div>
+                    
+                    {/* Mobile vertical divider line */}
+                    <div className="flex md:hidden w-[2px] h-6 border-l border-dotted border-white/30 my-0.5" />
+                  </>
                 )}
               </React.Fragment>
             );
@@ -158,13 +163,13 @@ export default function FourSteps() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 sm:mt-20 lg:mt-24 flex justify-center"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-12 sm:mt-20 lg:mt-24 flex justify-center"
         >
           <motion.button
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
-            className="btn-gold w-[210px] h-[50px] rounded-[50px] flex items-center justify-center gap-2.5 font-work font-medium text-[15px] leading-[18px] text-black cursor-pointer group select-none"
+            className="btn-gold w-full sm:w-[210px] h-[50px] rounded-[50px] flex items-center justify-center gap-2.5 font-work font-medium text-[15px] leading-[18px] text-black cursor-pointer group select-none shadow-lg shadow-[#C18C2C]/20"
           >
             <span>Schedule a Call</span>
             <ArrowRight className="w-[18px] h-[18px] stroke-[2.2] group-hover:translate-x-1 transition-transform duration-200" />

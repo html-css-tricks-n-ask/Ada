@@ -36,8 +36,8 @@ const treatments: TreatmentItem[] = [
 
 export default function TreatmentFocus() {
   return (
-    <section className="relative w-full bg-[#FAF5EB] py-16 sm:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-24">
+    <section className="relative w-full bg-[#FAF5EB] py-14 sm:py-20 lg:py-24 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-24">
         
         {/* Section Heading */}
         <motion.div
@@ -45,15 +45,15 @@ export default function TreatmentFocus() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16 sm:mb-20 lg:mb-24"
+          className="text-center mb-12 sm:mb-16 lg:mb-24"
         >
-          <h2 className="font-abhaya font-bold text-[36px] sm:text-[42px] lg:text-[46px] leading-tight text-black">
+          <h2 className="font-abhaya font-bold text-[32px] sm:text-[42px] lg:text-[46px] leading-tight text-black">
             Our Treatment Focus
           </h2>
         </motion.div>
 
         {/* Treatment Items List */}
-        <div className="flex flex-col space-y-20 sm:space-y-24 lg:space-y-28">
+        <div className="flex flex-col space-y-16 sm:space-y-24 lg:space-y-28">
           {treatments.map((item, index) => {
             const isImageLeft = item.imageOnLeft;
 
@@ -64,7 +64,7 @@ export default function TreatmentFocus() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.8, delay: index * 0.15 }}
-                className={`flex flex-col items-center justify-between gap-10 lg:gap-16 xl:gap-24 ${
+                className={`flex flex-col items-center justify-between gap-8 sm:gap-12 lg:gap-16 xl:gap-24 ${
                   isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
@@ -72,18 +72,18 @@ export default function TreatmentFocus() {
                 <motion.div
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.3 }}
-                  className="relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] shrink-0 cursor-pointer group"
+                  className="relative w-[260px] h-[260px] xs:w-[300px] xs:h-[300px] sm:w-[380px] sm:h-[380px] lg:w-[420px] lg:h-[420px] shrink-0 cursor-pointer group"
                 >
                   {/* Offset Gold Accent Ring */}
                   <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-[#DAA520] translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 pointer-events-none group-hover:translate-x-5 group-hover:translate-y-5 transition-transform duration-300"
+                    className="absolute inset-0 rounded-full border-2 border-[#DAA520] translate-x-2.5 translate-y-2.5 sm:translate-x-4 sm:translate-y-4 pointer-events-none group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-300"
                   />
                   
                   {/* Main Circular Image / Placeholder */}
                   <div className="relative z-10 w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-[#EAE3D2] to-[#D5CABB] border border-neutral-300/40 shadow-[0_8px_25px_rgba(0,0,0,0.06)] flex items-center justify-center text-center p-6">
                     <div className="flex flex-col items-center justify-center space-y-2 text-neutral-600">
-                      <div className="w-16 h-16 rounded-full bg-white/70 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300">
-                        <span className="font-abhaya font-bold text-2xl text-[#8E6E28]">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/70 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300">
+                        <span className="font-abhaya font-bold text-xl sm:text-2xl text-[#8E6E28]">
                           {index + 1}
                         </span>
                       </div>
@@ -95,20 +95,20 @@ export default function TreatmentFocus() {
                 </motion.div>
 
                 {/* Content Block */}
-                <div className="flex-1 max-w-[530px] flex flex-col justify-center text-left">
-                  <h3 className="font-abhaya font-bold text-[28px] sm:text-[34px] lg:text-[36px] leading-tight text-black">
+                <div className="flex-1 max-w-[530px] flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
+                  <h3 className="font-abhaya font-bold text-[24px] xs:text-[28px] sm:text-[34px] lg:text-[36px] leading-tight text-black">
                     {item.title}
                   </h3>
 
-                  <p className="font-work font-normal text-[15px] sm:text-[16px] lg:text-[17px] leading-[26px] sm:leading-[27px] text-neutral-800 mt-4 sm:mt-5">
+                  <p className="font-work font-normal text-[15px] sm:text-[16px] lg:text-[17px] leading-[24px] sm:leading-[27px] text-neutral-800 mt-3 sm:mt-5">
                     {item.description}
                   </p>
 
-                  <div className="mt-6 sm:mt-8">
+                  <div className="mt-5 sm:mt-8 w-full flex justify-center lg:justify-start">
                     <motion.button
                       whileHover={{ scale: 1.04 }}
                       whileTap={{ scale: 0.98 }}
-                      className="btn-gold w-[145px] h-[46px] rounded-[50px] font-work font-medium text-[14px] leading-[18px] text-black flex items-center justify-center cursor-pointer select-none"
+                      className="btn-gold w-full sm:w-[145px] h-[46px] rounded-[50px] font-work font-medium text-[14px] leading-[18px] text-black flex items-center justify-center cursor-pointer select-none shadow-md shadow-[#C18C2C]/15"
                     >
                       Learn More
                     </motion.button>

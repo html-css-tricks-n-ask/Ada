@@ -82,22 +82,22 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative w-full bg-[#FAF5EB] py-16 sm:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-[#FAF5EB] py-14 sm:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="font-abhaya font-bold text-[36px] sm:text-[42px] lg:text-[46px] leading-tight text-[#1B1B1B]">
+        <div className="text-center mb-10 sm:mb-16 lg:mb-20">
+          <h2 className="font-abhaya font-bold text-[32px] sm:text-[42px] lg:text-[46px] leading-tight text-[#1B1B1B]">
             What Our Patients Are saying
           </h2>
         </div>
 
         {/* Testimonials Slider Track */}
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden px-2">
           <div
-            className="flex items-stretch gap-6 sm:gap-8 transition-transform duration-500 ease-out"
+            className="flex items-stretch gap-4 sm:gap-8 transition-transform duration-500 ease-out"
             style={{
-              transform: `translateX(calc(50% - 220px - ${activeIndex * (440 + 32)}px))`,
+              transform: `translateX(calc(50% - 150px - ${activeIndex * (300 + 16)}px))`,
             }}
           >
             {testimonials.map((item, index) => {
@@ -107,31 +107,31 @@ export default function Testimonials() {
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(index)}
-                  className={`w-[320px] sm:w-[400px] lg:w-[440px] shrink-0 rounded-[24px] overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 ${
+                  className={`w-[290px] xs:w-[320px] sm:w-[380px] lg:w-[440px] shrink-0 rounded-[24px] overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 ${
                     isActive
                       ? "opacity-100 scale-100 shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
-                      : "opacity-60 scale-[0.97] hover:opacity-80"
+                      : "opacity-50 scale-[0.96] hover:opacity-80"
                   }`}
                 >
                   {/* Top Card Body - #F7EED9 exact color */}
-                  <div className="bg-[#F7EED9] p-7 sm:p-9 lg:p-10 flex-1 flex flex-col justify-start min-h-[220px] sm:min-h-[240px]">
+                  <div className="bg-[#F7EED9] p-6 xs:p-7 sm:p-9 lg:p-10 flex-1 flex flex-col justify-start min-h-[200px] sm:min-h-[240px]">
                     
                     {/* Quotation Mark */}
-                    <div className="text-[#1B1B1B] mb-4 select-none">
-                      <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                    <div className="text-[#1B1B1B] mb-3 sm:mb-4 select-none">
+                      <svg className="w-7 h-7 sm:w-8 sm:h-8 fill-current" viewBox="0 0 24 24">
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                       </svg>
                     </div>
 
                     {/* Quote Content - #1B1B1B */}
-                    <p className="font-work font-normal text-[15px] sm:text-[16px] lg:text-[17px] leading-[26px] sm:leading-[28px] text-[#1B1B1B]">
+                    <p className="font-work font-normal text-[14px] xs:text-[15px] sm:text-[16px] lg:text-[17px] leading-[24px] sm:leading-[28px] text-[#1B1B1B]">
                       {item.quote}
                     </p>
                   </div>
 
                   {/* Bottom Card Footer - #C18C2C exact color */}
-                  <div className="bg-[#C18C2C] h-[76px] sm:h-[82px] px-6 flex items-center justify-center gap-3.5">
-                    <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-[#FFFFFF] shrink-0 relative bg-neutral-200">
+                  <div className="bg-[#C18C2C] h-[70px] sm:h-[82px] px-5 sm:px-6 flex items-center justify-center gap-3">
+                    <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#FFFFFF] shrink-0 relative bg-neutral-200">
                       <Image
                         src={item.avatar}
                         alt={item.author}
@@ -142,10 +142,10 @@ export default function Testimonials() {
                       />
                     </div>
                     <div className="flex flex-col text-left">
-                      <span className="font-work font-semibold text-[15px] sm:text-[16px] leading-tight text-[#FFFFFF]">
+                      <span className="font-work font-semibold text-[14px] sm:text-[16px] leading-tight text-[#FFFFFF]">
                         {item.author}
                       </span>
-                      <span className="font-work font-normal text-[12px] sm:text-[13px] leading-tight text-[#FFFFFF]/90 mt-0.5">
+                      <span className="font-work font-normal text-[11px] sm:text-[13px] leading-tight text-[#FFFFFF]/90 mt-0.5">
                         {item.company}
                       </span>
                     </div>
@@ -157,7 +157,7 @@ export default function Testimonials() {
         </div>
 
         {/* 8 Geometric Pagination Dots */}
-        <div className="mt-12 sm:mt-14 flex items-center justify-center gap-3">
+        <div className="mt-10 sm:mt-14 flex items-center justify-center gap-2.5 sm:gap-3">
           {Array.from({ length: 8 }).map((_, dotIdx) => {
             const isDotActive = dotIdx === activeIndex;
 
@@ -166,13 +166,13 @@ export default function Testimonials() {
                 key={dotIdx}
                 onClick={() => setActiveIndex(dotIdx)}
                 aria-label={`Go to slide ${dotIdx + 1}`}
-                className="focus:outline-none p-1 group cursor-pointer"
+                className="focus:outline-none p-1.5 group cursor-pointer"
               >
                 {/* Diamond shape */}
                 <div
-                  className={`w-3 h-3 rotate-45 transition-all duration-300 ${
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rotate-45 transition-all duration-300 ${
                     isDotActive
-                      ? "bg-[#C18C2C] scale-125"
+                      ? "bg-[#C18C2C] scale-125 shadow-sm"
                       : "border-[1.5px] border-[#C18C2C] bg-transparent hover:bg-[#C18C2C]/30"
                   }`}
                   style={{ borderRadius: "1px" }}

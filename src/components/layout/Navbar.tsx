@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, Calendar, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "@/components/common/Logo";
 
@@ -95,25 +95,27 @@ export default function Navbar() {
           >
             <div className="flex flex-col space-y-1">
               
-              {/* Who we are */}
+              {/* Who we are with Chevron Icon */}
               <div className="border-b border-neutral-900/80 py-2">
                 <Link
                   href="#founder"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
+                  className="w-full flex items-center justify-between text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
                 >
-                  Who we are
+                  <span>Who we are</span>
+                  <ChevronDown className="w-4 h-4 text-white" />
                 </Link>
               </div>
 
-              {/* Who we treat */}
+              {/* Who we treat with Chevron Icon */}
               <div className="border-b border-neutral-900/80 py-2">
                 <Link
                   href="#treatment"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
+                  className="w-full flex items-center justify-between text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
                 >
-                  Who we treat
+                  <span>Who we treat</span>
+                  <ChevronDown className="w-4 h-4 text-white" />
                 </Link>
               </div>
 
@@ -128,37 +130,29 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              {/* Resources */}
+              {/* Resources with Chevron Icon */}
               <div className="border-b border-neutral-900/80 py-2">
                 <Link
                   href="#why-choose-us"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
+                  className="w-full flex items-center justify-between text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
                 >
-                  Resources
+                  <span>Resources</span>
+                  <ChevronDown className="w-4 h-4 text-white" />
                 </Link>
               </div>
 
             </div>
 
-            {/* Mobile Contact & CTA Bar */}
-            <div className="pt-6 space-y-3">
+            {/* Mobile CTA Button (Without contact number) */}
+            <div className="pt-6">
               <motion.button
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setMobileMenuOpen(false)}
-                className="btn-gold w-full h-[48px] rounded-[50px] font-work font-medium text-[15px] text-black flex items-center justify-center gap-2 shadow-lg shadow-[#C18C2C]/20"
+                className="btn-gold w-full h-[48px] rounded-[50px] font-work font-medium text-[15px] text-black flex items-center justify-center shadow-lg shadow-[#C18C2C]/20"
               >
-                <Calendar className="w-4 h-4" />
                 <span>Book an Appointment</span>
               </motion.button>
-              
-              <a
-                href="tel:4805269292"
-                className="w-full h-[44px] rounded-[50px] border border-white/20 text-white font-work font-medium text-[14px] flex items-center justify-center gap-2 hover:border-[#FCF38A] transition-colors"
-              >
-                <Phone className="w-4 h-4 text-[#FCF38A]" />
-                <span>Call: (480) 526-9292</span>
-              </a>
             </div>
           </motion.div>
         )}

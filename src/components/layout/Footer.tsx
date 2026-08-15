@@ -22,7 +22,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-[#DAA520] transition-colors">
+                <Link href="#treatment" className="hover:text-[#DAA520] transition-colors">
                   What We Treat
                 </Link>
               </li>
@@ -51,12 +51,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#blog" className="hover:text-[#DAA520] transition-colors">
+                <Link href="#why-choose-us" className="hover:text-[#DAA520] transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#insurance" className="hover:text-[#DAA520] transition-colors">
+                <Link href="#services" className="hover:text-[#DAA520] transition-colors">
                   Fees and Insurance
                 </Link>
               </li>
@@ -152,7 +152,9 @@ export default function Footer() {
               <div className="flex items-center gap-4">
                 {/* Instagram */}
                 <a
-                  href="#instagram"
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="w-7 h-7 relative hover:opacity-80 transition-opacity flex items-center justify-center"
                 >
@@ -167,7 +169,9 @@ export default function Footer() {
 
                 {/* Facebook */}
                 <a
-                  href="#facebook"
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
                   className="w-7 h-7 relative hover:opacity-80 transition-opacity flex items-center justify-center"
                 >
@@ -182,7 +186,9 @@ export default function Footer() {
 
                 {/* Twitter / X */}
                 <a
-                  href="#twitter"
+                  href="https://www.x.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Twitter"
                   className="w-7 h-7 relative hover:opacity-80 transition-opacity flex items-center justify-center"
                 >
@@ -197,7 +203,9 @@ export default function Footer() {
 
                 {/* TikTok */}
                 <a
-                  href="#tiktok"
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="TikTok"
                   className="w-7 h-7 relative hover:opacity-80 transition-opacity flex items-center justify-center"
                 >
@@ -212,7 +220,9 @@ export default function Footer() {
 
                 {/* LinkedIn */}
                 <a
-                  href="#linkedin"
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="w-7 h-7 relative hover:opacity-80 transition-opacity flex items-center justify-center"
                 >

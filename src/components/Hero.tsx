@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative w-full h-[565px] bg-black overflow-hidden select-none">
       
-      {/* Hero Background Image (hero.png) */}
+      {/* Hero Background Image (1440px x 565px) */}
       <div className="absolute inset-0 z-0 w-full h-full">
         <Image
           src="/hero.png"
@@ -19,14 +19,14 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center lg:object-[65%_center]"
+          className="object-cover object-[65%_center] lg:object-right"
         />
         
-        {/* Figma Exact Gradient Overlay: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 56.01%) */}
+        {/* Figma Exact Gradient Overlay */}
         <div 
           className="absolute inset-0 pointer-events-none hidden md:block"
           style={{
-            background: "linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.72) 28%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0) 62%)"
+            background: "linear-gradient(90deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.70) 28%, rgba(0, 0, 0, 0.35) 45%, rgba(0, 0, 0, 0) 62%)"
           }}
         />
 
@@ -39,39 +39,39 @@ export default function Hero() {
         />
       </div>
 
-      {/* Main Content Container matching exact 100px left padding */}
-      <div className="relative z-10 max-w-[1440px] h-full mx-auto px-6 sm:px-12 lg:px-[100px] flex flex-col justify-between pt-[70px] pb-[35px]">
+      {/* Main Content Container - Exact Figma 1440px width & 100px left offset */}
+      <div className="relative z-10 max-w-[1440px] h-[565px] mx-auto px-6 sm:px-12 lg:px-[100px] flex flex-col justify-between pt-[75px] sm:pt-[95px] lg:pt-[106px] pb-[36px]">
         
-        {/* Text and Button Block */}
+        {/* Content Group (Group 1948761154: width: 465px) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-[500px] flex flex-col"
+          className="max-w-[465px] flex flex-col"
         >
-          {/* Main Title - 2 clean lines */}
+          {/* Main Title - 48px uppercase Abhaya Libre */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-abhaya font-normal text-[36px] sm:text-[44px] lg:text-[48px] leading-[44px] sm:leading-[52px] lg:leading-[56px] uppercase text-white tracking-[0.5px] max-w-[465px]"
+            className="font-abhaya font-normal text-[36px] sm:text-[44px] lg:text-[48px] leading-[44px] sm:leading-[52px] lg:leading-[56px] uppercase text-white tracking-[0.5px]"
           >
             Need A Mental
             <br />
             Health Provider?
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - 20px Abhaya Libre */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="font-abhaya font-normal text-[19px] sm:text-[20px] leading-[28px] text-white mt-5 sm:mt-6"
+            className="font-abhaya font-normal text-[19px] sm:text-[20px] leading-[28px] text-white mt-4 sm:mt-5"
           >
             No Look Further
           </motion.p>
 
-          {/* Description */}
+          {/* Description - 20px Abhaya Libre (max-width: 425px) */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,12 +81,12 @@ export default function Hero() {
             Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs.
           </motion.p>
 
-          {/* Learn More Button */}
+          {/* Learn More Button - 163px x 50px */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-7 sm:mt-8"
+            className="mt-6 sm:mt-7"
           >
             <motion.button
               whileHover={{ scale: 1.04 }}
@@ -99,8 +99,8 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Bottom-left Hexagonal Carousel Pagination Dots (matching Figma) */}
-        <div className="flex items-center gap-2.5 pt-4">
+        {/* Bottom-left Hexagonal Carousel Pagination Dots */}
+        <div className="flex items-center gap-2.5">
           {Array.from({ length: 5 }).map((_, idx) => {
             const isActive = idx === activeSlide;
 

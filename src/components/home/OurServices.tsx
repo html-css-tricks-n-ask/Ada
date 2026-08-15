@@ -8,8 +8,7 @@ import { motion } from "framer-motion";
 interface ServiceItem {
   title: string;
   subtitle?: string;
-  imageIcon?: string;
-  customIcon?: React.ReactNode;
+  imageIcon: string;
 }
 
 const services: ServiceItem[] = [
@@ -31,21 +30,12 @@ const services: ServiceItem[] = [
   {
     title: "ADHD",
     subtitle: "Screening",
-    customIcon: (
-      <svg viewBox="0 0 48 48" className="w-[50px] h-[50px] stroke-[#B37E22]" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 20C14 20 13 22 13 24C13 26 14.5 28 16 29C15 31 16 33 18 34C20 35 22 35 24 34" />
-        <path d="M32 20C34 20 35 22 35 24C35 26 33.5 28 32 29C33 31 32 33 30 34C28 35 26 35 24 34" />
-        <path d="M17 18C17 15 19.5 13 22 13C23 13 24 13.5 24 14C24 13.5 25 13 26 13C28.5 13 31 15 31 18" />
-        <text x="24" y="27" textAnchor="middle" fill="#B37E22" stroke="none" fontFamily="'Work Sans', sans-serif" fontSize="8" fontWeight="bold" letterSpacing="0.5">
-          ADHD
-        </text>
-      </svg>
-    ),
+    imageIcon: "/brain.png",
   },
   {
     title: "MAT",
     subtitle: "Treatment",
-    imageIcon: "/brain.png",
+    imageIcon: "/human-brain.png",
   },
   {
     title: "Gene Sight",
@@ -72,8 +62,8 @@ export default function OurServices() {
           </h2>
         </motion.div>
 
-        {/* 6 Services Items with exact 102px gap on desktop */}
-        <div className="flex flex-wrap lg:flex-nowrap items-start justify-center gap-y-10 gap-x-6 sm:gap-x-10 lg:gap-x-[102px]">
+        {/* 6 Services Items with exact 80px gap on desktop */}
+        <div className="flex flex-wrap lg:flex-nowrap items-start justify-center gap-y-10 gap-x-6 sm:gap-x-10 lg:gap-x-[80px] max-w-[1050px] mx-auto">
           {services.map((item, idx) => (
             <motion.div
               key={idx}
@@ -90,22 +80,18 @@ export default function OurServices() {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 className="w-[94px] h-[94px] rounded-full bg-[#F3E8D3] group-hover:bg-[#EBDDC3] border border-[#DFC377]/30 flex items-center justify-center shadow-[0_4px_16px_rgba(193,140,44,0.12)] p-4"
               >
-                {item.imageIcon ? (
-                  <div className="relative w-[56px] h-[56px] flex items-center justify-center">
-                    <Image
-                      src={item.imageIcon}
-                      alt={`${item.title} ${item.subtitle || ""}`}
-                      fill
-                      sizes="56px"
-                      className="object-contain"
-                    />
-                  </div>
-                ) : (
-                  item.customIcon
-                )}
+                <div className="relative w-[56px] h-[56px] flex items-center justify-center">
+                  <Image
+                    src={item.imageIcon}
+                    alt={`${item.title} ${item.subtitle || ""}`}
+                    fill
+                    sizes="56px"
+                    className="object-contain"
+                  />
+                </div>
               </motion.div>
 
-              {/* Title & Subtitle: Abhaya Libre 700 Bold */}
+              {/* Title & Subtitle: Abhaya Libre 700 Bold #000000 */}
               <div className="mt-4 sm:mt-5 flex flex-col items-center">
                 <span className="font-abhaya font-bold text-[18px] sm:text-[19px] leading-[22px] text-[#000000] whitespace-nowrap group-hover:text-[#B37E22] transition-colors">
                   {item.title}

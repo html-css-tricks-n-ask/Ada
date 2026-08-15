@@ -22,7 +22,7 @@ export default function Hero() {
           className="object-cover object-[48%_15%]"
         />
         
-        {/* Figma Exact Gradient Overlay: Linear Gradient #000000 to #000000 0% */}
+        {/* Desktop Gradient Overlay */}
         <div 
           className="absolute inset-0 pointer-events-none hidden md:block"
           style={{
@@ -99,7 +99,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Bottom-left Hexagonal Carousel Pagination Indicators (Exact Figma 112px x 16px, 16px x 16px per hexagon) */}
+        {/* Carousel Pagination Indicators */}
         <div className="w-[112px] h-[16px] flex items-center justify-between">
           {Array.from({ length: 5 }).map((_, idx) => {
             const isActive = idx === activeSlide;

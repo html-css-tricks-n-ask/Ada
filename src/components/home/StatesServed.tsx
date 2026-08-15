@@ -85,10 +85,10 @@ export default function StatesServed() {
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
 
-                {/* Exact Figma Shade Layer 1: #000000 25% tint */}
+                {/* Overlay Tint */}
                 <div className="absolute inset-0 bg-black/25 pointer-events-none" />
 
-                {/* Exact Figma Shade Layer 2: Linear Gradient #232020 0% -> 45% -> 100% */}
+                {/* Bottom Vignette Gradient */}
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
@@ -98,7 +98,7 @@ export default function StatesServed() {
                 />
               </div>
 
-              {/* State Name: Abhaya Libre 700 Bold 44px / 100% leading #000000 */}
+              {/* State Name */}
               <h3 className="font-abhaya font-bold text-[32px] sm:text-[38px] lg:text-[44px] leading-[100%] text-[#000000] mt-5 sm:mt-6 group-hover:text-[#C18C2C] transition-colors">
                 {item.name}
               </h3>

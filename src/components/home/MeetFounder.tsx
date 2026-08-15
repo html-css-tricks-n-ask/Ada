@@ -15,7 +15,7 @@ export default function MeetFounder() {
         {/* Desktop View (>= 1200px): Exact 1440px x 637px */}
         <div className="hidden xl:block relative w-[1440px] h-[637px] mx-auto">
           
-          {/* Rectangle 164665: Gold Border Card */}
+          {/* Decorative Gold Accent Card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -30,7 +30,7 @@ export default function MeetFounder() {
             }}
           />
 
-          {/* Rectangle 164664: Founder Image (second.png) */}
+          {/* Founder Portrait */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -53,7 +53,7 @@ export default function MeetFounder() {
             />
           </motion.div>
 
-          {/* Group 1948761079: Founder Details & Content - exact Left: 703px */}
+          {/* Founder Profile Details */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}

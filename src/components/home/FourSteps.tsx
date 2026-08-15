@@ -78,7 +78,7 @@ export default function FourSteps() {
   return (
     <section className="relative w-full bg-black overflow-hidden select-none flex flex-col justify-between">
       
-      {/* Top 6px Gold Gradient Border (1440px x 6px, Rotation: 180°) */}
+      {/* Top Accent Border */}
       <div
         className="w-full h-[6px] flex-shrink-0"
         style={{
@@ -88,7 +88,7 @@ export default function FourSteps() {
 
       <div className="max-w-[1440px] w-full mx-auto min-h-[515.4px] px-4 sm:px-8 lg:px-[100px] flex flex-col justify-between py-10 lg:py-[46px]">
         
-        {/* Section Heading: Abhaya Libre 700 Bold 40px / 60px Warm Gold */}
+        {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -136,11 +136,19 @@ export default function FourSteps() {
                   </div>
                 </motion.div>
 
-                {/* Connecting Dashed Line: exact width 158.88px, border 1px dashed 2,2 */}
+                {/* Connecting Dashed Line: Full gap width aligned with icon center with dense dot pattern */}
                 {!isLast && (
-                  <div className="flex-1 flex items-center justify-center pt-7 px-1 min-w-[60px]">
-                    <svg width="159" height="2" viewBox="0 0 159 2" className="w-full max-w-[159px] h-[2px]">
-                      <line x1="0" y1="1" x2="159" y2="1" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="2 2" />
+                  <div className="flex-1 flex items-center justify-center mt-[27px] mx-1 sm:mx-2 min-w-[90px]">
+                    <svg className="w-full h-[2px]" preserveAspectRatio="none">
+                      <line
+                        x1="0"
+                        y1="1"
+                        x2="100%"
+                        y2="1"
+                        stroke="#FFFFFF"
+                        strokeWidth="1.2"
+                        strokeDasharray="1 2"
+                      />
                     </svg>
                   </div>
                 )}
@@ -178,7 +186,7 @@ export default function FourSteps() {
 
                 {!isLast && (
                   <svg width="2" height="32" viewBox="0 0 2 32" className="w-[2px] h-8 my-0.5">
-                    <line x1="1" y1="0" x2="1" y2="32" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="2 2" />
+                    <line x1="1" y1="0" x2="1" y2="32" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="1 2" />
                   </svg>
                 )}
               </React.Fragment>
@@ -206,7 +214,7 @@ export default function FourSteps() {
 
       </div>
 
-      {/* Bottom 6px Gold Gradient Border (1440px x 6px) */}
+      {/* Bottom Accent Border */}
       <div
         className="w-full h-[6px] flex-shrink-0"
         style={{

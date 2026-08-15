@@ -159,7 +159,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Hexagonal Carousel Pagination Indicators (Exact Figma 16px x 16px, 1px #C18C2C) */}
+        {/* Carousel Pagination Indicators */}
         <div className="mt-12 sm:mt-16 flex items-center justify-center gap-2.5">
           {Array.from({ length: 8 }).map((_, dotIdx) => {
             const isDotActive = dotIdx === activeIndex;

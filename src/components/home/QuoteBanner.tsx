@@ -4,10 +4,10 @@ export default function QuoteBanner() {
   return (
     <section className="relative w-full bg-[#FAF4E6] overflow-hidden select-none">
       
-      {/* Full Bleed Banner Container (Exact 1440px x 241px) */}
+      {/* Banner Container */}
       <div className="relative w-full h-[241px] flex items-center justify-center">
         
-        {/* Full-width SVG stretching edge to edge with exact Figma wavy ribbon */}
+        {/* Full-width Ribbon Graphic */}
         <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none">
           <svg
             viewBox="0 0 1355 241"

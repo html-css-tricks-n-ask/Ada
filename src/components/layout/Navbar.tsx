@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, Calendar, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "./Logo";
+import Logo from "@/components/common/Logo";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -2,17 +2,12 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronDown, Menu, X, Phone, Calendar } from "lucide-react";
+import { Menu, X, Phone, Calendar, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "./Logo";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [expandedSubmenu, setExpandedSubmenu] = useState<string | null>(null);
-
-  const toggleSubmenu = (menu: string) => {
-    setExpandedSubmenu(expandedSubmenu === menu ? null : menu);
-  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-black/95 backdrop-blur-md border-b border-white/5 transition-all">
@@ -96,52 +91,24 @@ export default function Navbar() {
               
               {/* Who we are */}
               <div className="border-b border-neutral-900/80 py-2">
-                <button
-                  onClick={() => toggleSubmenu("who-we-are")}
-                  className="w-full flex items-center justify-between text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
+                <Link
+                  href="#founder"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
                 >
-                  <span>Who we are</span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      expandedSubmenu === "who-we-are" ? "rotate-180 text-[#FCF38A]" : ""
-                    }`}
-                  />
-                </button>
-                {expandedSubmenu === "who-we-are" && (
-                  <div className="pl-4 py-2 space-y-2 text-sm text-neutral-400 font-work">
-                    <Link href="#founder" onClick={() => setMobileMenuOpen(false)} className="block hover:text-white">
-                      Meet the Founder
-                    </Link>
-                    <Link href="#mission" onClick={() => setMobileMenuOpen(false)} className="block hover:text-white">
-                      Our Mission
-                    </Link>
-                  </div>
-                )}
+                  Who we are
+                </Link>
               </div>
 
               {/* Who we treat */}
               <div className="border-b border-neutral-900/80 py-2">
-                <button
-                  onClick={() => toggleSubmenu("who-we-treat")}
-                  className="w-full flex items-center justify-between text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
+                <Link
+                  href="#treatment"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
                 >
-                  <span>Who we treat</span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      expandedSubmenu === "who-we-treat" ? "rotate-180 text-[#FCF38A]" : ""
-                    }`}
-                  />
-                </button>
-                {expandedSubmenu === "who-we-treat" && (
-                  <div className="pl-4 py-2 space-y-2 text-sm text-neutral-400 font-work">
-                    <Link href="#adults" onClick={() => setMobileMenuOpen(false)} className="block hover:text-white">
-                      Adults & Adolescents
-                    </Link>
-                    <Link href="#conditions" onClick={() => setMobileMenuOpen(false)} className="block hover:text-white">
-                      Conditions Treated
-                    </Link>
-                  </div>
-                )}
+                  Who we treat
+                </Link>
               </div>
 
               {/* Services */}
@@ -157,27 +124,13 @@ export default function Navbar() {
 
               {/* Resources */}
               <div className="border-b border-neutral-900/80 py-2">
-                <button
-                  onClick={() => toggleSubmenu("resources")}
-                  className="w-full flex items-center justify-between text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
+                <Link
+                  href="#why-choose-us"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-white font-work font-medium text-[16px] py-2 hover:text-[#FCF38A] transition-colors"
                 >
-                  <span>Resources</span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      expandedSubmenu === "resources" ? "rotate-180 text-[#FCF38A]" : ""
-                    }`}
-                  />
-                </button>
-                {expandedSubmenu === "resources" && (
-                  <div className="pl-4 py-2 space-y-2 text-sm text-neutral-400 font-work">
-                    <Link href="#faq" onClick={() => setMobileMenuOpen(false)} className="block hover:text-white">
-                      Frequently Asked Questions
-                    </Link>
-                    <Link href="#blog" onClick={() => setMobileMenuOpen(false)} className="block hover:text-white">
-                      Blog & Insights
-                    </Link>
-                  </div>
-                )}
+                  Resources
+                </Link>
               </div>
 
             </div>

@@ -99,8 +99,8 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Bottom-left Hexagonal Carousel Pagination Indicators */}
-        <div className="flex items-center gap-2.5">
+        {/* Bottom-left Hexagonal Carousel Pagination Indicators (Exact Figma 112px x 16px, 16px x 16px per hexagon) */}
+        <div className="w-[112px] h-[16px] flex items-center justify-between">
           {Array.from({ length: 5 }).map((_, idx) => {
             const isActive = idx === activeSlide;
 
@@ -109,22 +109,54 @@ export default function Hero() {
                 key={idx}
                 onClick={() => setActiveSlide(idx)}
                 aria-label={`Hero slide ${idx + 1}`}
-                className="focus:outline-none group p-1 cursor-pointer"
+                className="w-[16px] h-[16px] flex items-center justify-center focus:outline-none group cursor-pointer"
               >
                 {isActive ? (
-                  <div
-                    className="w-3.5 h-3.5 bg-gradient-to-r from-[#DFC377] to-[#C18C2C] shadow-[0_0_8px_rgba(252,243,138,0.5)] transition-all duration-300"
-                    style={{
-                      clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
-                    }}
-                  />
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    shapeRendering="geometricPrecision"
+                    className="w-[16px] h-[16px]"
+                  >
+                    <defs>
+                      <linearGradient
+                        id={`heroActiveHex-${idx}`}
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="16"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0%" stopColor="#C18C2C" />
+                        <stop offset="50%" stopColor="#FCF38A" />
+                        <stop offset="100%" stopColor="#C18C2C" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M8 0.5L15 4.5V11.5L8 15.5L1 11.5V4.5L8 0.5Z"
+                      fill={`url(#heroActiveHex-${idx})`}
+                    />
+                  </svg>
                 ) : (
-                  <div
-                    className="w-3.5 h-3.5 bg-transparent border border-[#DFC377]/60 group-hover:border-[#DFC377] transition-all duration-300"
-                    style={{
-                      clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
-                    }}
-                  />
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    shapeRendering="geometricPrecision"
+                    className="w-[16px] h-[16px] transition-transform duration-200 group-hover:scale-105"
+                  >
+                    <path
+                      d="M8 0.8L15 4.7V11.3L8 15.2L1 11.3V4.7L8 0.8Z"
+                      stroke="#DAA520"
+                      strokeWidth="0.75"
+                      strokeLinejoin="miter"
+                      fill="none"
+                      className="group-hover:stroke-[#FCF38A] transition-colors"
+                    />
+                  </svg>
                 )}
               </button>
             );

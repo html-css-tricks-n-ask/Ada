@@ -26,8 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${workSans.variable} ${abhayaLibre.variable} h-full`}>
-      <body className="min-h-full font-sans antialiased bg-white text-black selection:bg-[#C18C2C]/30">
+    <html
+      lang="en"
+      className={`${workSans.variable} ${abhayaLibre.variable} h-full`}
+      suppressHydrationWarning
+    >
+      <body
+        className="min-h-full font-sans antialiased bg-white text-black selection:bg-[#C18C2C]/30"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

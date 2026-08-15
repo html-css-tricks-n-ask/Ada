@@ -62,15 +62,15 @@ export default function WhyChooseUs() {
             {/* Offset Gold Border Frame */}
             <div className="absolute inset-0 translate-x-4 translate-y-4 sm:translate-x-6 sm:translate-y-6 border border-[#DAA520] pointer-events-none rounded-none z-0" />
             
-            {/* Main Image / Placeholder */}
+            {/* Main Consultation Image (six.png) */}
             <div className="relative z-10 w-full h-[320px] sm:h-[400px] lg:h-[430px] overflow-hidden bg-neutral-200 shadow-md">
               <Image
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80"
+                src="/six.png"
                 alt="Therapy session at Ada Psychiatry"
                 fill
                 sizes="(max-width: 1024px) 100vw, 620px"
                 className="object-cover object-center"
-                unoptimized
+                priority
               />
             </div>
           </motion.div>
@@ -84,7 +84,7 @@ export default function WhyChooseUs() {
             className="w-full max-w-[580px] flex flex-col justify-center"
           >
             {/* Section Title */}
-            <h2 className="font-abhaya font-bold text-[34px] sm:text-[40px] lg:text-[44px] leading-[42px] sm:leading-[48px] lg:leading-[52px] text-black mb-8 sm:mb-10">
+            <h2 className="font-abhaya font-bold text-[32px] sm:text-[40px] lg:text-[44px] leading-[40px] sm:leading-[48px] lg:leading-[52px] text-black mb-8 sm:mb-10">
               Why Should You Choose Ada Psychiatry?
             </h2>
 
@@ -106,17 +106,13 @@ export default function WhyChooseUs() {
                       onClick={() => toggleItem(item.id)}
                       className="w-full flex items-center justify-start text-left gap-3.5 group cursor-pointer focus:outline-none"
                     >
-                      <motion.span
-                        animate={{ rotate: isOpen ? 0 : 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="shrink-0 text-black group-hover:text-[#B37E22] transition-colors"
-                      >
+                      <span className="shrink-0 text-black group-hover:text-[#B37E22] transition-colors">
                         {isOpen ? (
                           <Minus className="w-5 h-5 stroke-[2]" />
                         ) : (
                           <Plus className="w-5 h-5 stroke-[2]" />
                         )}
-                      </motion.span>
+                      </span>
 
                       <span className="font-abhaya font-bold text-[20px] sm:text-[22px] leading-[26px] text-black group-hover:text-[#B37E22] transition-colors">
                         {item.title}

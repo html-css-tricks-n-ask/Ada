@@ -24,7 +24,7 @@ export default function MeetFounder() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="absolute border-2 border-[#DAA520] rounded-[20px]"
+              className="absolute border-[1.5px] sm:border-2 border-[#DAA520] rounded-[24px]"
               style={{
                 width: "722px",
                 height: "410px",
@@ -33,13 +33,13 @@ export default function MeetFounder() {
               }}
             />
 
-            {/* Rectangle 164664: Founder Image */}
+            {/* Rectangle 164664: Founder Image (second.png) */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="absolute rounded-[20px] overflow-hidden z-10 bg-neutral-200 shadow-[0_10px_30px_rgba(0,0,0,0.08)]"
+              className="absolute rounded-[24px] overflow-hidden z-10 bg-neutral-200 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
               style={{
                 width: "509px",
                 height: "330px",
@@ -48,7 +48,7 @@ export default function MeetFounder() {
               }}
             >
               <Image
-                src="/founder.jpg"
+                src="/second.png"
                 alt="Lakeisha Appleton - Founder"
                 fill
                 sizes="509px"
@@ -78,11 +78,11 @@ export default function MeetFounder() {
                 Lakeisha Appleton
               </h3>
 
-              <p className="font-work font-medium text-[20px] leading-[22px] text-black mt-2">
+              <p className="font-work font-medium text-[19px] leading-[22px] text-black mt-2">
                 FNP-C, PMHNP- BC
               </p>
 
-              <p className="font-work font-normal text-[19px] leading-[26px] text-black mt-5 max-w-[514px]">
+              <p className="font-work font-normal text-[18px] leading-[26px] text-black mt-5 max-w-[500px]">
                 “Mental health problems don’t define who you are. They are something you experience. You walk in the rain and you feel the rain, but, importantly, YOU ARE NOT THE RAIN.” — Matt Haig
               </p>
 
@@ -90,7 +90,7 @@ export default function MeetFounder() {
                 <motion.button
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.98 }}
-                  className="btn-gold w-[163px] h-[50px] rounded-[50px] flex items-center justify-center gap-2.5 font-work font-medium text-[16px] leading-[27px] text-black cursor-pointer group select-none"
+                  className="btn-gold w-[163px] h-[50px] rounded-[50px] flex items-center justify-center gap-2.5 font-work font-medium text-[16px] leading-[27px] text-black cursor-pointer group select-none shadow-md shadow-[#C18C2C]/20"
                 >
                   <span>Learn More</span>
                   <ArrowRight className="w-[18px] h-[18px] stroke-[2.2] group-hover:translate-x-1 transition-transform duration-200" />
@@ -107,12 +107,12 @@ export default function MeetFounder() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative border-2 border-[#DAA520] rounded-[20px] p-5 sm:p-8 flex flex-col items-center shadow-sm"
+              className="relative border-2 border-[#DAA520] rounded-[24px] p-5 sm:p-8 flex flex-col items-center shadow-sm"
             >
               {/* Responsive Image */}
-              <div className="w-full max-w-[480px] h-[240px] xs:h-[280px] sm:h-[320px] rounded-[16px] overflow-hidden mb-6 relative bg-neutral-200 shadow-md">
+              <div className="w-full max-w-[480px] h-[240px] xs:h-[280px] sm:h-[320px] rounded-[20px] overflow-hidden mb-6 relative bg-neutral-200 shadow-md">
                 <Image
-                  src="/founder.jpg"
+                  src="/second.png"
                   alt="Lakeisha Appleton - Founder"
                   fill
                   sizes="(max-width: 1200px) 100vw, 509px"

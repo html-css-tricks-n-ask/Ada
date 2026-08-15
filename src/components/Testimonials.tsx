@@ -82,7 +82,7 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative w-full bg-[#FAF5EB] py-14 sm:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-[#FAF4E6] py-14 sm:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 
 export default function QuoteBanner() {
   return (
-    <section className="relative w-full bg-[#FAF5EB] py-8 sm:py-12 lg:py-16 overflow-hidden">
+    <section className="relative w-full bg-[#FAF4E6] py-8 sm:py-12 lg:py-16 overflow-hidden">
       
       {/* Full Bleed Vector Background (Edge to Edge without side gaps) */}
       <div className="relative w-full min-h-[220px] sm:min-h-[241px] flex items-center justify-center">
@@ -37,7 +39,7 @@ export default function QuoteBanner() {
           </div>
 
           {/* Quote Text */}
-          <blockquote className="font-abhaya font-semibold text-[24px] sm:text-[30px] lg:text-[36px] leading-[34px] sm:leading-[42px] lg:leading-[48px] text-white tracking-wide">
+          <blockquote className="font-abhaya font-semibold text-[22px] sm:text-[30px] lg:text-[36px] leading-[32px] sm:leading-[42px] lg:leading-[48px] text-white tracking-wide">
             “We help people living with and experiencing difficult times”
           </blockquote>
 

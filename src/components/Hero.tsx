@@ -40,7 +40,7 @@ export default function Hero() {
       </div>
 
       {/* Main Content Container - Exact Figma 1440px width & 100px left offset */}
-      <div className="relative z-10 max-w-[1440px] h-[565px] mx-auto px-6 sm:px-12 lg:px-[100px] flex flex-col justify-between pt-[75px] sm:pt-[95px] lg:pt-[106px] pb-[36px]">
+      <div className="relative z-10 max-w-[1440px] h-[565px] mx-auto px-6 sm:px-12 lg:px-[100px] flex flex-col justify-between pt-[75px] sm:pt-[95px] lg:pt-[106px] pb-[34px]">
         
         {/* Content Group (Group 1948761154: width: 465px) */}
         <motion.div
@@ -49,34 +49,34 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-[465px] flex flex-col"
         >
-          {/* Main Title - 48px uppercase Abhaya Libre */}
+          {/* Main Title - Abhaya Libre 400 Regular 48px / 56.5px uppercase */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-abhaya font-normal text-[36px] sm:text-[44px] lg:text-[48px] leading-[44px] sm:leading-[52px] lg:leading-[56px] uppercase text-white tracking-[0.5px]"
+            className="font-abhaya font-normal text-[36px] sm:text-[44px] lg:text-[48px] leading-[44px] sm:leading-[52px] lg:leading-[56.5px] uppercase text-[#FFFFFF] tracking-[0px] w-full max-w-[465px]"
           >
             Need A Mental
             <br />
             Health Provider?
           </motion.h1>
 
-          {/* Subtitle - 20px Abhaya Libre */}
+          {/* Subtitle - Abhaya Libre 400 Regular 20px / 28px */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="font-abhaya font-normal text-[19px] sm:text-[20px] leading-[28px] text-white mt-4 sm:mt-5"
+            className="font-abhaya font-normal text-[18px] sm:text-[20px] leading-[28px] text-[#FFFFFF] tracking-[0px] mt-[6px]"
           >
             No Look Further
           </motion.p>
 
-          {/* Description - 20px Abhaya Libre (max-width: 425px) */}
+          {/* Description - Abhaya Libre 400 Regular 20px / 28px max-w-[425px] */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35 }}
-            className="font-abhaya font-normal text-[17px] sm:text-[19px] lg:text-[20px] leading-[26px] sm:leading-[28px] text-white/95 mt-1 max-w-[425px]"
+            className="font-abhaya font-normal text-[18px] sm:text-[20px] leading-[28px] text-[#FFFFFF] tracking-[0px] mt-[6px] max-w-[425px]"
           >
             Our goal is to provide a safe, comfortable, and warm environment so that you can openly discuss your mental health needs.
           </motion.p>
@@ -86,7 +86,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-6 sm:mt-7"
+            className="mt-[40px]"
           >
             <motion.button
               whileHover={{ scale: 1.04 }}

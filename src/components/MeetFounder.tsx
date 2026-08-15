@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function MeetFounder() {
   return (
-    <section id="founder" className="relative w-full bg-white overflow-hidden">
+    <section id="founder" className="relative w-full bg-[#FAF4E6] overflow-hidden">
       
       {/* Upper Main Box with #F7EED9 background */}
       <div className="w-full bg-[#F7EED9] pt-8 sm:pt-12 pb-6 sm:pb-8">
@@ -154,8 +154,8 @@ export default function MeetFounder() {
 
       </div>
 
-      {/* Wave Divider in #F7EED9 transitioning to white background */}
-      <div className="w-full bg-white overflow-hidden leading-none -mt-[1px] flex pointer-events-none">
+      {/* Wave Divider in #F7EED9 transitioning to #FAF4E6 background */}
+      <div className="w-full bg-[#FAF4E6] overflow-hidden leading-none -mt-[1px] flex pointer-events-none">
         <svg
           viewBox="-85 285 720 32"
           fill="none"

@@ -96,7 +96,7 @@ const services: ServiceItem[] = [
 
 export default function OurServices() {
   return (
-    <section id="services" className="relative w-full bg-[#FAF5EB] py-16 sm:py-20 lg:py-24 overflow-hidden">
+    <section id="services" className="relative w-full bg-[#FAF4E6] py-16 sm:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
         
         {/* Section Heading */}
